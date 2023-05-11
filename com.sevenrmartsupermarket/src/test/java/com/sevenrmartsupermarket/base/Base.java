@@ -1,19 +1,43 @@
 package com.sevenrmartsupermarket.base;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.time.Duration;
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import com.sevenrmartsupermarket.constants.Constants;
+import com.sevenrmartsupermarket.utilities.WaitUtility;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
 	public WebDriver driver;
+	Properties properties = new Properties();
+
+	public Base() {
+		try {
+			FileInputStream fileInput = new FileInputStream(Constants.CONFIG_FILE_PATH);
+			properties.load(fileInput);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	public void initialise(String browser, String url) {
 		if (browser.equals("chrome")) {
+			ChromeOptions co = new ChromeOptions();
+			co.addArguments("--remote-allow-origins=*");
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(co);
 		} else if (browser.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
@@ -21,5 +45,22 @@ public class Base {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));
+	}
+
+	@BeforeMethod
+	public void launchBrowser() {
+		String browserValue = properties.getProperty("browser");
+		String urlValue = properties.getProperty("url");
+		initialise(browserValue, urlValue);
+
+	}
+
+	@AfterMethod
+	public void terminateBrowser() {
+//		driver.quit();
 	}
 }
