@@ -10,10 +10,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.sevenrmartsupermarket.constants.Constants;
+import com.sevenrmartsupermarket.utilities.Screenshot;
 import com.sevenrmartsupermarket.utilities.WaitUtility;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -21,6 +23,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Base {
 	public WebDriver driver;
 	Properties properties = new Properties();
+	Screenshot screenshot = new Screenshot();
 
 	public Base() {
 		try {
@@ -60,7 +63,10 @@ public class Base {
 	}
 
 	@AfterMethod
-	public void terminateBrowser() {
+	public void terminateBrowser(ITestResult iTestResult) {
+		if (iTestResult.getStatus() == ITestResult.FAILURE) {
+			screenshot.takeScreenShot(driver, iTestResult.getName());
+		}
 //		driver.quit();
 	}
 }

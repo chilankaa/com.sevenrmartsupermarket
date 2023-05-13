@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import com.sevenrmartsupermarket.base.Base;
 import com.sevenrmartsupermarket.pages.HomePage;
 import com.sevenrmartsupermarket.pages.LoginPage;
+import com.sevenrmartsupermarket.utilities.Screenshot;
 
 
 public class LoginTest extends Base{
@@ -23,12 +24,12 @@ public class LoginTest extends Base{
 	@Test
 	public void verifyErrorMessageOnInvalidUserLogin() {
 		loginPage=new LoginPage(driver);
-		loginPage.login("admi","ad");
+		loginPage.login("adm","ad");
 		boolean status=loginPage.isErrorMessageDisplayed();
 		Assert.assertTrue(status);
 	}
 	@Test
-	public void verifySignInButton() {
+	public void verifySignInButtonText() {
 		loginPage=new LoginPage(driver);
 		String expectedLoginButtonText="Sign In";
 		boolean status=loginPage.isLoginButtonTextAsExpected(expectedLoginButtonText);
