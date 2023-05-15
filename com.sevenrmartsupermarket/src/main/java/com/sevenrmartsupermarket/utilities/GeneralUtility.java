@@ -1,5 +1,8 @@
 package com.sevenrmartsupermarket.utilities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -17,11 +20,21 @@ public class GeneralUtility {
 	public boolean is_Selected(WebElement element) {
 		return element.isSelected();
 	}
+
 	public boolean is_Displayed(WebElement element) {
 		return element.isDisplayed();
 	}
-	public boolean is_TextAsExpected(WebElement element,String expectedText) {
-		String text=element.getText();
+
+	public boolean is_TextAsExpected(WebElement element, String expectedText) {
+		String text = element.getText();
 		return text.equals(expectedText);
+	}
+
+	public List<String> getTextofElements(List<WebElement> names) {
+		List<String> nameText = new ArrayList<String>();
+		for (int i = 0; i < names.size(); i++) {
+			nameText.add(names.get(i).getText());
+		}
+		return nameText;
 	}
 }
