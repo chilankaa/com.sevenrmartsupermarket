@@ -42,13 +42,13 @@ public class PageUtility {
 		select.selectByIndex(index);
 	}
 
-	public void select_ByVisibleText(WebElement element, int index) {
+	public void select_ByVisibleText(WebElement element, String text) {
 		Select select = new Select(element);
-		select.selectByIndex(index);
+		select.selectByVisibleText(text);
 	}
 
-	public void select_ByValue(WebElement element, int index) {
+	public void select_ByValue(WebElement element, String value) {
 		Select select = new Select(element);
-		select.selectByIndex(index);
+		select.selectByValue(value);
 	}
 }

@@ -54,7 +54,7 @@ public class Base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));
 	}
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void launchBrowser() {
 		String browserValue = properties.getProperty("browser");
 		String urlValue = properties.getProperty("url");
@@ -62,7 +62,7 @@ public class Base {
 
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void terminateBrowser(ITestResult iTestResult) {
 		if (iTestResult.getStatus() == ITestResult.FAILURE) {
 			screenshot.takeScreenShot(driver, iTestResult.getName());

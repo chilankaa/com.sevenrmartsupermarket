@@ -17,6 +17,16 @@ public class ManageUsersPage {
 	WebElement manageUsers;
 	@FindBy(xpath = "//table//tbody//tr//td[1]")
 	List<WebElement> nameElements;
+	@FindBy(xpath = "//a[@class='btn btn-rounded btn-primary']")
+	WebElement searchUserElement;
+	@FindBy(xpath = "//input[@placeholder='Name']")
+	WebElement nameInSearchElement;
+	@FindBy(xpath = "//button[@class='btn btn-block-sm btn-danger']")
+	WebElement searchingElement;
+	@FindBy(xpath = "//table//tbody//tr[1]//td[1]")
+	WebElement searchedName;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
+	WebElement statusChangingAlert;
 
 	public ManageUsersPage(WebDriver driver) {
 		this.driver = driver;
@@ -26,8 +36,11 @@ public class ManageUsersPage {
 	public void clickOnManageUsers() {
 		manageUsers.click();
 	}
+	public void clickOnSearch() {
+		searchUserElement.click();
+	}
 
-	public void deactivateUser(String userName) {
+	public boolean deactivateUser(String userName) {
 		GeneralUtility generalutility = new GeneralUtility(driver);
 		List<String> names = generalutility.getTextofElements(nameElements);
 		int i = 0;
@@ -40,5 +53,15 @@ public class ManageUsersPage {
 		WebElement element = driver.findElement(By.xpath("//table//tbody//tr[" + i + "]//td[6]//i[1]"));
 		PageUtility pageUtility = new PageUtility(driver);
 		pageUtility.scrollAndClick(element);
+		return generalutility.is_Displayed(statusChangingAlert);
+	}
+	public void searchUserByName(String name) {
+		clickOnSearch();
+		nameInSearchElement.sendKeys(name);
+		searchingElement.click();
+	}
+	public boolean isSearchUserFound(String userName) {
+		searchUserByName(userName);
+		return userName.equals(searchedName.getText());
 	}
 }

@@ -12,7 +12,7 @@ public class LoginTest extends Base{
 	LoginPage loginPage;
 	HomePage homepage;
 	
-	@Test
+	@Test(groups = "feature1")
 	public void verifyUserLogin() {
 		loginPage=new LoginPage(driver);
 		homepage=new HomePage(driver);
@@ -21,14 +21,14 @@ public class LoginTest extends Base{
 		String actualProfileName=homepage.getProfileName();
 		Assert.assertEquals(actualProfileName, expectedProfileName);
 	}
-	@Test
+	@Test(groups = "sanity")
 	public void verifyErrorMessageOnInvalidUserLogin() {
 		loginPage=new LoginPage(driver);
 		loginPage.login("adm","ad");
 		boolean status=loginPage.isErrorMessageDisplayed();
 		Assert.assertTrue(status);
 	}
-	@Test
+	@Test(groups = "regression")
 	public void verifySignInButtonText() {
 		loginPage=new LoginPage(driver);
 		String expectedLoginButtonText="Sign In";
