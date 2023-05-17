@@ -4,20 +4,27 @@
   <listeners>
     <listener class-name="com.sevenrmartsupermarket.listeners.ExtentReporter"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="bug retest run(failed)">
-    <groups>
-      <run>
-        <include name="bug retest"/>
-      </run>
-    </groups>
+  <test thread-count="5" parallel="tests" name="edge browser(failed)">
+    <parameter name="browser" value="edge"/>
     <classes>
       <class name="com.sevenrmartsupermarket.tests.AdminUsersTest">
         <methods>
+          <include name="launchBrowser"/>
           <include name="launchBrowser"/>
           <include name="terminateBrowser"/>
           <include name="verifyNewUserAdd"/>
         </methods>
       </class> <!-- com.sevenrmartsupermarket.tests.AdminUsersTest -->
+      <class name="com.sevenrmartsupermarket.tests.LoginTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="terminateBrowser"/>
+          <include name="verifyUserLogin"/>
+          <include name="verifyErrorMessageOnInvalidUserLogin"/>
+          <include name="verifySignInButtonText"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.LoginTest -->
     </classes>
-  </test> <!-- bug retest run(failed) -->
+  </test> <!-- edge browser(failed) -->
 </suite> <!-- Failed suite [group execution] -->

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 17 14:52:54 IST 2023</td>
+<td>Started on:</td><td>Wed May 17 21:18:16 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>8 seconds (8907 ms)</td>
+<tr><td>Total time:</td><td>21 seconds (21208 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -79,11 +79,13 @@ function toggleAllBoxes() {
 <td title='com.sevenrmartsupermarket.tests.LoginTest.verifyUserLogin()'><b>verifyUserLogin</b><br>Test class: com.sevenrmartsupermarket.tests.LoginTest</td>
 <td><div><pre>java.lang.AssertionError: expected [admin] but found [Admin]
 	at com.sevenrmartsupermarket.tests.LoginTest.verifyUserLogin(LoginTest.java:22)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1786062086", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1786062086'><pre>java.lang.AssertionError: expected [admin] but found [Admin]
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace563620447", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace563620447'><pre>java.lang.AssertionError: expected [admin] but found [Admin]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -103,6 +105,13 @@ function toggleAllBoxes() {
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
@@ -121,7 +130,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.sevenrmartsupermarket.tests.LoginTest.verifyErrorMessageOnInvalidUserLogin()'><b>verifyErrorMessageOnInvalidUserLogin</b><br>Test class: com.sevenrmartsupermarket.tests.LoginTest</td>
 <td></td>
-<td>0</td>
+<td>1</td>
 <td>com.sevenrmartsupermarket.tests.LoginTest@f79e</td></tr>
 <tr>
 <td title='com.sevenrmartsupermarket.tests.LoginTest.verifySignInButtonText()'><b>verifySignInButtonText</b><br>Test class: com.sevenrmartsupermarket.tests.LoginTest</td>

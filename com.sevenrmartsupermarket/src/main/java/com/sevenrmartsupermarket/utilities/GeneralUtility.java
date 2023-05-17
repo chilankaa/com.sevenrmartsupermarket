@@ -1,6 +1,8 @@
 package com.sevenrmartsupermarket.utilities;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -36,5 +38,9 @@ public class GeneralUtility {
 			nameText.add(names.get(i).getText());
 		}
 		return nameText;
+	}
+	public static String  getTimeStammp() {
+		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date());
+		return timeStamp;
 	}
 }

@@ -13,6 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import com.sevenrmartsupermarket.constants.Constants;
 import com.sevenrmartsupermarket.utilities.Screenshot;
@@ -54,12 +55,19 @@ public class Base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));
 	}
 
-	@BeforeMethod(alwaysRun = true)
+	@BeforeMethod(alwaysRun = true, enabled = false)
 	public void launchBrowser() {
 		String browserValue = properties.getProperty("browser");
 		String urlValue = properties.getProperty("url");
 		initialise(browserValue, urlValue);
 
+	}
+
+	@Parameters("browser")
+	@BeforeMethod(alwaysRun = true, enabled = true)
+	public void launchBrowser(String browserValue) {
+		String urlValue = properties.getProperty("url");
+		initialise(browserValue, urlValue);
 	}
 
 	@AfterMethod(alwaysRun = true)
