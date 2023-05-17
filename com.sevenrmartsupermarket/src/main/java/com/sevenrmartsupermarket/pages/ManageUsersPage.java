@@ -25,7 +25,7 @@ public class ManageUsersPage {
 	WebElement searchingElement;
 	@FindBy(xpath = "//table//tbody//tr[1]//td[1]")
 	WebElement searchedName;
-	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement statusChangingAlert;
 
 	public ManageUsersPage(WebDriver driver) {
@@ -36,6 +36,7 @@ public class ManageUsersPage {
 	public void clickOnManageUsers() {
 		manageUsers.click();
 	}
+
 	public void clickOnSearch() {
 		searchUserElement.click();
 	}
@@ -55,11 +56,13 @@ public class ManageUsersPage {
 		pageUtility.scrollAndClick(element);
 		return generalutility.is_Displayed(statusChangingAlert);
 	}
+
 	public void searchUserByName(String name) {
 		clickOnSearch();
 		nameInSearchElement.sendKeys(name);
 		searchingElement.click();
 	}
+
 	public boolean isSearchUserFound(String userName) {
 		searchUserByName(userName);
 		return userName.equals(searchedName.getText());
