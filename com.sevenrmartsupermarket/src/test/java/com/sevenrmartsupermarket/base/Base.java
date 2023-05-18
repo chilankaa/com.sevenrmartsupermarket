@@ -55,7 +55,7 @@ public class Base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));
 	}
 
-	@BeforeMethod(alwaysRun = true, enabled = false)
+	@BeforeMethod(alwaysRun = true, enabled = true)
 	public void launchBrowser() {
 		String browserValue = properties.getProperty("browser");
 		String urlValue = properties.getProperty("url");
@@ -64,7 +64,7 @@ public class Base {
 	}
 
 	@Parameters("browser")
-	@BeforeMethod(alwaysRun = true, enabled = true)
+	@BeforeMethod(alwaysRun = true, enabled = false)
 	public void launchBrowser(String browserValue) {
 		String urlValue = properties.getProperty("url");
 		initialise(browserValue, urlValue);

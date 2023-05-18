@@ -44,7 +44,6 @@
 			<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 				<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
 					<li class='analysis waves-effect'><a href='#!' class='categories-view' onclick="_updateCurrentStage(1)"><i class='mdi-maps-local-offer'></i>Categories</a></li>
-					<li class='analysis waves-effect'><a href='#!' class='exceptions-view' onclick="_updateCurrentStage(2)"><i class='mdi-action-bug-report'></i>Exceptions</a></li>
 				<li class='analysis waves-effect'>
 					<a href='#!' onclick="_updateCurrentStage(-1)" class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a>
 				</li>
@@ -55,7 +54,7 @@
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2023-05-17 21:53:13</span>
+					<span class='suite-started-time'>2023-05-18 21:34:22</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -85,25 +84,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 0m 47s+808ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 0m 31s+996ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 0m 47s+808ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 0m 31s+996ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2023-05-17 21:52:25</span> 
+							<span class='panel-lead suite-started-time'>2023-05-18 21:33:50</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2023-05-17 21:53:13</span> 
+							<span class='panel-lead suite-ended-time'>2023-05-18 21:34:22</span> 
 						</div> 
 					</div>
 				</div>
@@ -220,6 +219,11 @@
 													sanity
 												</td>
 											</tr>
+											<tr>
+												<td>
+													smoke
+												</td>
+											</tr>
 									</tbody>
 								</table>
 							</div>
@@ -257,6 +261,7 @@
 											<li class='feature1'><a href='#!'>feature1</a></li>
 											<li class='regression'><a href='#!'>regression</a></li>
 											<li class='sanity'><a href='#!'>sanity</a></li>
+											<li class='smoke'><a href='#!'>smoke</a></li>
 										<li class='divider'></li>
 										<li class='clear'><a href='#!'>Clear Filters</a></li>
 									</ul>
@@ -288,22 +293,23 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active pass ' extentid='89809a5a-60a2-4ed7-a2cb-fd4def450ae4'>
+										<li class='collection-item test displayed active pass ' extentid='43285ddb-89b6-4da0-83ad-0385567f14f8'>
 											<div class='test-head'>
-												<span class='test-name'>verifyErrorMessageOnInvalidUserLogin </span>
+												<span class='test-name'>verifyStatusChangingButton </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide  sanity'></span>
+												<span class='category-assigned hide  bugretest smoke'></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-17 21:52:32</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-17 21:52:33</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+925ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-18 21:34:03</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-18 21:34:03</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
 														<div class='categories'>
-																<span class='category text-white'>sanity</span>
+																<span class='category text-white'>bug retest</span>
+																<span class='category text-white'>smoke</span>
 														</div>
 												</div>
 												<div class='test-steps'>
@@ -318,7 +324,7 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>21:52:33</td>
+																	<td class='timestamp'>21:34:03</td>
 																	<td class='step-details'>Test passed</td>
 																</tr>
 														</tbody>
@@ -328,87 +334,7 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='75798e90-8c4c-4d77-8819-86664bc6a5fd'>
-											<div class='test-head'>
-												<span class='test-name'>verifySignInButtonText </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide  regression'></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-17 21:52:37</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-17 21:52:37</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+139ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-														<div class='categories'>
-																<span class='category text-white'>regression</span>
-														</div>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>21:52:37</td>
-																	<td class='step-details'>Test passed</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='d23764ef-7d02-4e53-9310-51f6c5b6b5db'>
-											<div class='test-head'>
-												<span class='test-name'>verifyUserLogin </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide  feature1'></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-17 21:52:42</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-17 21:52:44</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+200ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-														<div class='categories'>
-																<span class='category text-white'>feature1</span>
-														</div>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>21:52:44</td>
-																	<td class='step-details'>Test passed</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='4132a8e0-a572-4661-aa9e-f7b79e4a66d9'>
+										<li class='collection-item test displayed active pass ' extentid='367d81a5-7136-45be-9d57-cbcd85474841'>
 											<div class='test-head'>
 												<span class='test-name'>verifyNewUserAdd </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
@@ -416,9 +342,9 @@
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-17 21:52:25</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-17 21:52:29</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 3s+275ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-18 21:34:08</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-18 21:34:13</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 5s+192ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -438,7 +364,7 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>21:52:29</td>
+																	<td class='timestamp'>21:34:13</td>
 																	<td class='step-details'>Test passed</td>
 																</tr>
 														</tbody>
@@ -448,350 +374,22 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active skip ' extentid='b60f474a-4bae-46e7-8f64-c82a50fb468c'>
+										<li class='collection-item test displayed active pass ' extentid='4ccf2ee6-8a22-420c-845f-619755cebaef'>
 											<div class='test-head'>
-												<span class='test-name'>verifyNewUserAdd </span>
-												<span class='test-status label right outline capitalize skip'>skip</span>
-												<span class='category-assigned hide  bugretest'></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-17 21:52:48</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-17 21:52:48</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-														<div class='categories'>
-																<span class='category text-white'>bug retest</span>
-														</div>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
-																	<td class='timestamp'>21:52:48</td>
-																	<td class='step-details'><textarea>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:62336/devtools/browser/5ea26a5d-5952-4a72-9bca-f229b9fb10f9
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: driver.version: EdgeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:42)
-	at com.sevenrmartsupermarket.base.Base.initialise(Base.java:50)
-	at com.sevenrmartsupermarket.base.Base.launchBrowser(Base.java:70)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</textarea></td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active skip ' extentid='6234f639-e381-427a-91ea-726cd4c6da8b'>
-											<div class='test-head'>
-												<span class='test-name'>verifySignInButtonText </span>
-												<span class='test-status label right outline capitalize skip'>skip</span>
-												<span class='category-assigned hide  regression'></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-17 21:52:54</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-17 21:52:54</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-														<div class='categories'>
-																<span class='category text-white'>regression</span>
-														</div>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
-																	<td class='timestamp'>21:52:54</td>
-																	<td class='step-details'><textarea>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:62385/devtools/browser/5b189f29-334b-407d-8be2-6d76788cbfcf
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: driver.version: EdgeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:42)
-	at com.sevenrmartsupermarket.base.Base.initialise(Base.java:50)
-	at com.sevenrmartsupermarket.base.Base.launchBrowser(Base.java:70)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</textarea></td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active skip ' extentid='f0dcc4fb-12ec-46cd-b646-0276681d0f7c'>
-											<div class='test-head'>
-												<span class='test-name'>verifyErrorMessageOnInvalidUserLogin </span>
-												<span class='test-status label right outline capitalize skip'>skip</span>
-												<span class='category-assigned hide  sanity'></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-17 21:52:51</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-17 21:52:51</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-														<div class='categories'>
-																<span class='category text-white'>sanity</span>
-														</div>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
-																	<td class='timestamp'>21:52:51</td>
-																	<td class='step-details'><textarea>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:62385/devtools/browser/5b189f29-334b-407d-8be2-6d76788cbfcf
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: driver.version: EdgeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:42)
-	at com.sevenrmartsupermarket.base.Base.initialise(Base.java:50)
-	at com.sevenrmartsupermarket.base.Base.launchBrowser(Base.java:70)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</textarea></td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active skip ' extentid='0313c782-59ce-4620-806b-439be8ffc2a0'>
-											<div class='test-head'>
-												<span class='test-name'>verifyUserLogin </span>
-												<span class='test-status label right outline capitalize skip'>skip</span>
-												<span class='category-assigned hide  feature1'></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-17 21:52:57</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-17 21:52:57</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-														<div class='categories'>
-																<span class='category text-white'>feature1</span>
-														</div>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
-																	<td class='timestamp'>21:52:57</td>
-																	<td class='step-details'><textarea>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:62385/devtools/browser/5b189f29-334b-407d-8be2-6d76788cbfcf
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: driver.version: EdgeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:42)
-	at com.sevenrmartsupermarket.base.Base.initialise(Base.java:50)
-	at com.sevenrmartsupermarket.base.Base.launchBrowser(Base.java:70)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</textarea></td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='3d6e9748-c64e-4216-a632-7436f8042af0'>
-											<div class='test-head'>
-												<span class='test-name'>verifyNewUserAdd </span>
+												<span class='test-name'>verifyPushNotification </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide  bugretest'></span>
+												<span class='category-assigned hide  smoke'></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-17 21:52:32</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-17 21:52:35</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 3s+351ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-18 21:34:03</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-18 21:34:13</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 10s+856ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
 														<div class='categories'>
-																<span class='category text-white'>bug retest</span>
+																<span class='category text-white'>smoke</span>
 														</div>
 												</div>
 												<div class='test-steps'>
@@ -806,7 +404,7 @@ Driver info: driver.version: EdgeDriver
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>21:52:35</td>
+																	<td class='timestamp'>21:34:13</td>
 																	<td class='step-details'>Test passed</td>
 																</tr>
 														</tbody>
@@ -816,22 +414,23 @@ Driver info: driver.version: EdgeDriver
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='74047396-5f50-4c1e-90c6-7ee8f1dcee5c'>
+										<li class='collection-item test displayed active pass ' extentid='a8324bad-5e74-4512-855b-be8e774bbb39'>
 											<div class='test-head'>
-												<span class='test-name'>verifyErrorMessageOnInvalidUserLogin </span>
+												<span class='test-name'>verifyStatusChangingButton </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide  sanity'></span>
+												<span class='category-assigned hide  bugretest smoke'></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-17 21:52:43</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-17 21:52:44</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+14ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-18 21:34:20</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-18 21:34:20</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
 														<div class='categories'>
-																<span class='category text-white'>sanity</span>
+																<span class='category text-white'>bug retest</span>
+																<span class='category text-white'>smoke</span>
 														</div>
 												</div>
 												<div class='test-steps'>
@@ -846,7 +445,7 @@ Driver info: driver.version: EdgeDriver
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>21:52:44</td>
+																	<td class='timestamp'>21:34:20</td>
 																	<td class='step-details'>Test passed</td>
 																</tr>
 														</tbody>
@@ -856,17 +455,58 @@ Driver info: driver.version: EdgeDriver
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='3b387827-ee70-4d3d-959c-5823c324a602'>
+										<li class='collection-item test displayed active pass ' extentid='383ce279-0acc-4120-98fd-27cda8b76dc7'>
 											<div class='test-head'>
-												<span class='test-name'>verifySignInButtonText </span>
+												<span class='test-name'>verifyStatusChangingButton </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide  bugretest smoke'></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-18 21:33:53</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-18 21:33:53</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+1ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+														<div class='categories'>
+																<span class='category text-white'>bug retest</span>
+																<span class='category text-white'>smoke</span>
+														</div>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:33:53</td>
+																	<td class='step-details'>Test passed</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='00f6cb9f-985d-4e5c-991a-67108c986bc0'>
+											<div class='test-head'>
+												<span class='test-name'>verifySearchUser </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
 												<span class='category-assigned hide  regression'></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-17 21:53:01</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-17 21:53:01</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+93ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-18 21:33:50</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-18 21:33:50</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+2ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -886,7 +526,7 @@ Driver info: driver.version: EdgeDriver
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>21:53:01</td>
+																	<td class='timestamp'>21:33:50</td>
 																	<td class='step-details'>Test passed</td>
 																</tr>
 														</tbody>
@@ -896,7 +536,127 @@ Driver info: driver.version: EdgeDriver
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='3ac3f2f9-5d74-40bd-b627-d7972057544c'>
+										<li class='collection-item test displayed active pass ' extentid='f453dfab-9237-41dc-922c-e4b9284c1780'>
+											<div class='test-head'>
+												<span class='test-name'>verifyNewUserAdd </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide  bugretest'></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-18 21:33:50</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-18 21:33:54</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 3s+691ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+														<div class='categories'>
+																<span class='category text-white'>bug retest</span>
+														</div>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:33:54</td>
+																	<td class='step-details'>Test passed</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='c095d57f-452f-4e4f-98ff-a17bd5717a08'>
+											<div class='test-head'>
+												<span class='test-name'>verifyErrorMessageOnInvalidUserLogin </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide  sanity'></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-18 21:33:50</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-18 21:33:51</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+469ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+														<div class='categories'>
+																<span class='category text-white'>sanity</span>
+														</div>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:33:51</td>
+																	<td class='step-details'>Test passed</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='22591dde-cf24-4fd1-ab5a-5570d1ca204a'>
+											<div class='test-head'>
+												<span class='test-name'>verifySignInButtonText </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide  regression'></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-18 21:33:55</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-18 21:33:55</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+84ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+														<div class='categories'>
+																<span class='category text-white'>regression</span>
+														</div>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>21:33:55</td>
+																	<td class='step-details'>Test passed</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='ff134821-9392-41b1-aebc-87f14a4e9c79'>
 											<div class='test-head'>
 												<span class='test-name'>verifyUserLogin </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
@@ -904,9 +664,9 @@ Driver info: driver.version: EdgeDriver
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-17 21:53:09</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-17 21:53:12</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 3s+47ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2023-05-18 21:33:57</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2023-05-18 21:33:59</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+391ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -926,7 +686,7 @@ Driver info: driver.version: EdgeDriver
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>21:53:12</td>
+																	<td class='timestamp'>21:33:59</td>
 																	<td class='step-details'>Test passed</td>
 																</tr>
 														</tbody>
@@ -988,15 +748,14 @@ Driver info: driver.version: EdgeDriver
 													<span class='category-name'>bug retest</span>
 												</div>
 												<div class='category-status-counts'>
-														<span class='pass label dot'>Pass: 2</span>
-														<span class='other label dot'>Others: 1</span>
+														<span class='pass label dot'>Pass: 5</span>
 												</div>
 												<div class='cat-body'>
 													<div class='category-status-counts'>
 														<div class='button-group'>
-															<a href='#!' class='pass label filter'>Pass <span class='icon'>2</span></a>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>5</span></a>
 															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
-															<a href='#!' class='other label filter'>Others <span class='icon'>1</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
 														</div>
 													</div>
 													<div class='cat-tests'>
@@ -1010,18 +769,28 @@ Driver info: driver.version: EdgeDriver
 															</thead>
 															<tbody>
 																	<tr class='pass'>
-																		<td>2023-05-17 21:52:25</td>
-																		<td><span class='category-link linked' extentid='4132a8e0-a572-4661-aa9e-f7b79e4a66d9'>verifyNewUserAdd</span></td>
+																		<td>2023-05-18 21:34:03</td>
+																		<td><span class='category-link linked' extentid='43285ddb-89b6-4da0-83ad-0385567f14f8'>verifyStatusChangingButton</span></td>
 																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
-																	<tr class='skip'>
-																		<td>2023-05-17 21:52:48</td>
-																		<td><span class='category-link linked' extentid='b60f474a-4bae-46e7-8f64-c82a50fb468c'>verifyNewUserAdd</span></td>
-																		<td><div class='status label capitalize skip'>skip</div></td>
+																	<tr class='pass'>
+																		<td>2023-05-18 21:34:08</td>
+																		<td><span class='category-link linked' extentid='367d81a5-7136-45be-9d57-cbcd85474841'>verifyNewUserAdd</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
 																	<tr class='pass'>
-																		<td>2023-05-17 21:52:32</td>
-																		<td><span class='category-link linked' extentid='3d6e9748-c64e-4216-a632-7436f8042af0'>verifyNewUserAdd</span></td>
+																		<td>2023-05-18 21:34:20</td>
+																		<td><span class='category-link linked' extentid='a8324bad-5e74-4512-855b-be8e774bbb39'>verifyStatusChangingButton</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2023-05-18 21:33:53</td>
+																		<td><span class='category-link linked' extentid='383ce279-0acc-4120-98fd-27cda8b76dc7'>verifyStatusChangingButton</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2023-05-18 21:33:50</td>
+																		<td><span class='category-link linked' extentid='f453dfab-9237-41dc-922c-e4b9284c1780'>verifyNewUserAdd</span></td>
 																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
 															<tbody>
@@ -1034,15 +803,14 @@ Driver info: driver.version: EdgeDriver
 													<span class='category-name'>feature1</span>
 												</div>
 												<div class='category-status-counts'>
-														<span class='pass label dot'>Pass: 2</span>
-														<span class='other label dot'>Others: 1</span>
+														<span class='pass label dot'>Pass: 1</span>
 												</div>
 												<div class='cat-body'>
 													<div class='category-status-counts'>
 														<div class='button-group'>
-															<a href='#!' class='pass label filter'>Pass <span class='icon'>2</span></a>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>1</span></a>
 															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
-															<a href='#!' class='other label filter'>Others <span class='icon'>1</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
 														</div>
 													</div>
 													<div class='cat-tests'>
@@ -1056,18 +824,8 @@ Driver info: driver.version: EdgeDriver
 															</thead>
 															<tbody>
 																	<tr class='pass'>
-																		<td>2023-05-17 21:52:42</td>
-																		<td><span class='category-link linked' extentid='d23764ef-7d02-4e53-9310-51f6c5b6b5db'>verifyUserLogin</span></td>
-																		<td><div class='status label capitalize pass'>pass</div></td>
-																	</tr>
-																	<tr class='skip'>
-																		<td>2023-05-17 21:52:57</td>
-																		<td><span class='category-link linked' extentid='0313c782-59ce-4620-806b-439be8ffc2a0'>verifyUserLogin</span></td>
-																		<td><div class='status label capitalize skip'>skip</div></td>
-																	</tr>
-																	<tr class='pass'>
-																		<td>2023-05-17 21:53:09</td>
-																		<td><span class='category-link linked' extentid='3ac3f2f9-5d74-40bd-b627-d7972057544c'>verifyUserLogin</span></td>
+																		<td>2023-05-18 21:33:57</td>
+																		<td><span class='category-link linked' extentid='ff134821-9392-41b1-aebc-87f14a4e9c79'>verifyUserLogin</span></td>
 																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
 															<tbody>
@@ -1081,14 +839,13 @@ Driver info: driver.version: EdgeDriver
 												</div>
 												<div class='category-status-counts'>
 														<span class='pass label dot'>Pass: 2</span>
-														<span class='other label dot'>Others: 1</span>
 												</div>
 												<div class='cat-body'>
 													<div class='category-status-counts'>
 														<div class='button-group'>
 															<a href='#!' class='pass label filter'>Pass <span class='icon'>2</span></a>
 															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
-															<a href='#!' class='other label filter'>Others <span class='icon'>1</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
 														</div>
 													</div>
 													<div class='cat-tests'>
@@ -1102,18 +859,13 @@ Driver info: driver.version: EdgeDriver
 															</thead>
 															<tbody>
 																	<tr class='pass'>
-																		<td>2023-05-17 21:52:37</td>
-																		<td><span class='category-link linked' extentid='75798e90-8c4c-4d77-8819-86664bc6a5fd'>verifySignInButtonText</span></td>
+																		<td>2023-05-18 21:33:50</td>
+																		<td><span class='category-link linked' extentid='00f6cb9f-985d-4e5c-991a-67108c986bc0'>verifySearchUser</span></td>
 																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
-																	<tr class='skip'>
-																		<td>2023-05-17 21:52:54</td>
-																		<td><span class='category-link linked' extentid='6234f639-e381-427a-91ea-726cd4c6da8b'>verifySignInButtonText</span></td>
-																		<td><div class='status label capitalize skip'>skip</div></td>
-																	</tr>
 																	<tr class='pass'>
-																		<td>2023-05-17 21:53:01</td>
-																		<td><span class='category-link linked' extentid='3b387827-ee70-4d3d-959c-5823c324a602'>verifySignInButtonText</span></td>
+																		<td>2023-05-18 21:33:55</td>
+																		<td><span class='category-link linked' extentid='22591dde-cf24-4fd1-ab5a-5570d1ca204a'>verifySignInButtonText</span></td>
 																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
 															<tbody>
@@ -1126,15 +878,14 @@ Driver info: driver.version: EdgeDriver
 													<span class='category-name'>sanity</span>
 												</div>
 												<div class='category-status-counts'>
-														<span class='pass label dot'>Pass: 2</span>
-														<span class='other label dot'>Others: 1</span>
+														<span class='pass label dot'>Pass: 1</span>
 												</div>
 												<div class='cat-body'>
 													<div class='category-status-counts'>
 														<div class='button-group'>
-															<a href='#!' class='pass label filter'>Pass <span class='icon'>2</span></a>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>1</span></a>
 															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
-															<a href='#!' class='other label filter'>Others <span class='icon'>1</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
 														</div>
 													</div>
 													<div class='cat-tests'>
@@ -1148,18 +899,58 @@ Driver info: driver.version: EdgeDriver
 															</thead>
 															<tbody>
 																	<tr class='pass'>
-																		<td>2023-05-17 21:52:32</td>
-																		<td><span class='category-link linked' extentid='89809a5a-60a2-4ed7-a2cb-fd4def450ae4'>verifyErrorMessageOnInvalidUserLogin</span></td>
+																		<td>2023-05-18 21:33:50</td>
+																		<td><span class='category-link linked' extentid='c095d57f-452f-4e4f-98ff-a17bd5717a08'>verifyErrorMessageOnInvalidUserLogin</span></td>
 																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
-																	<tr class='skip'>
-																		<td>2023-05-17 21:52:51</td>
-																		<td><span class='category-link linked' extentid='f0dcc4fb-12ec-46cd-b646-0276681d0f7c'>verifyErrorMessageOnInvalidUserLogin</span></td>
-																		<td><div class='status label capitalize skip'>skip</div></td>
+															<tbody>
+														</table>
+													</div>
+												</div> 
+											</li>
+											<li class='category-item displayed'>
+												<div class='cat-head'>
+													<span class='category-name'>smoke</span>
+												</div>
+												<div class='category-status-counts'>
+														<span class='pass label dot'>Pass: 4</span>
+												</div>
+												<div class='cat-body'>
+													<div class='category-status-counts'>
+														<div class='button-group'>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>4</span></a>
+															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+														</div>
+													</div>
+													<div class='cat-tests'>
+														<table class='bordered'>
+															<thead>
+																<tr>
+																	<th>RunDate</th>
+																	<th>Test Name</th>
+																	<th>Status</th>
+																</tr>
+															</thead>
+															<tbody>
+																	<tr class='pass'>
+																		<td>2023-05-18 21:34:03</td>
+																		<td><span class='category-link linked' extentid='43285ddb-89b6-4da0-83ad-0385567f14f8'>verifyStatusChangingButton</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
 																	<tr class='pass'>
-																		<td>2023-05-17 21:52:43</td>
-																		<td><span class='category-link linked' extentid='74047396-5f50-4c1e-90c6-7ee8f1dcee5c'>verifyErrorMessageOnInvalidUserLogin</span></td>
+																		<td>2023-05-18 21:34:03</td>
+																		<td><span class='category-link linked' extentid='4ccf2ee6-8a22-420c-845f-619755cebaef'>verifyPushNotification</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2023-05-18 21:34:20</td>
+																		<td><span class='category-link linked' extentid='a8324bad-5e74-4512-855b-be8e774bbb39'>verifyStatusChangingButton</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2023-05-18 21:33:53</td>
+																		<td><span class='category-link linked' extentid='383ce279-0acc-4120-98fd-27cda8b76dc7'>verifyStatusChangingButton</span></td>
 																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
 															<tbody>
@@ -1185,251 +976,6 @@ Driver info: driver.version: EdgeDriver
 			<!-- /categories -->
 			
 			<!-- exceptions -->
-				<div id='exceptions-view' class='row _addedTable hide'>
-					<div class='col _addedCell1'>
-						<div class='contents'>
-							<div class='card-panel heading'>
-								<h5>Defects</h5>
-							</div>
-							<div class='card-panel filters'>
-								<div class='search' alt='Search tests' title='Search tests'>
-									<div class='input-field left'>
-										<input id='searchTests' type='text' class='validate' placeholder='Search tests...'>
-									</div>
-									<a href="#" class='btn-floating btn-small waves-effect waves-light blue lighten-1'>
-										<i class='mdi-action-search'></i>
-									</a>
-								</div>
-							</div>
-							<div class='card-panel no-padding-h no-padding-v'>
-								<div class='wrapper'>
-									<ul id='exception-collection' class='exception-collection'>
-											<li class='exception-item displayed'>
-												<div class='exception-head'>
-													<span class='exception-name'>org.openqa.selenium.remote.http.ConnectionFailedException</span>
-												</div>
-												<div class='exception-test-count'>
-													<span class='fail label'>4</span>
-												</div>
-												<div class='exception-body'>
-													<div class='exception-tests'>
-														<table class='bordered'>
-															<thead>
-																<tr>
-																	<th>RunDate</th>
-																	<th>Test Name</th>
-																	<th>Exception</th>
-																</tr>
-															</thead>
-															<tbody>
-                                                                   <tr class='skip'>
-                                                                       <td>2023-05-17 21:52:48</td>
-                                                                       <td><span class='exception-link linked' extentid='b60f474a-4bae-46e7-8f64-c82a50fb468c'>verifyNewUserAdd</span></td>
-                                                                       <td><pre class='exception-message'>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:62336/devtools/browser/5ea26a5d-5952-4a72-9bca-f229b9fb10f9
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: driver.version: EdgeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:42)
-	at com.sevenrmartsupermarket.base.Base.initialise(Base.java:50)
-	at com.sevenrmartsupermarket.base.Base.launchBrowser(Base.java:70)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></td>
-                                                                   </tr>
-                                                                   <tr class='skip'>
-                                                                       <td>2023-05-17 21:52:54</td>
-                                                                       <td><span class='exception-link linked' extentid='6234f639-e381-427a-91ea-726cd4c6da8b'>verifySignInButtonText</span></td>
-                                                                       <td><pre class='exception-message'>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:62385/devtools/browser/5b189f29-334b-407d-8be2-6d76788cbfcf
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: driver.version: EdgeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:42)
-	at com.sevenrmartsupermarket.base.Base.initialise(Base.java:50)
-	at com.sevenrmartsupermarket.base.Base.launchBrowser(Base.java:70)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></td>
-                                                                   </tr>
-                                                                   <tr class='skip'>
-                                                                       <td>2023-05-17 21:52:51</td>
-                                                                       <td><span class='exception-link linked' extentid='f0dcc4fb-12ec-46cd-b646-0276681d0f7c'>verifyErrorMessageOnInvalidUserLogin</span></td>
-                                                                       <td><pre class='exception-message'>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:62385/devtools/browser/5b189f29-334b-407d-8be2-6d76788cbfcf
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: driver.version: EdgeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:42)
-	at com.sevenrmartsupermarket.base.Base.initialise(Base.java:50)
-	at com.sevenrmartsupermarket.base.Base.launchBrowser(Base.java:70)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></td>
-                                                                   </tr>
-                                                                   <tr class='skip'>
-                                                                       <td>2023-05-17 21:52:57</td>
-                                                                       <td><span class='exception-link linked' extentid='0313c782-59ce-4620-806b-439be8ffc2a0'>verifyUserLogin</span></td>
-                                                                       <td><pre class='exception-message'>org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:62385/devtools/browser/5b189f29-334b-407d-8be2-6d76788cbfcf
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: driver.version: EdgeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:114)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:54)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:46)
-	at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:42)
-	at com.sevenrmartsupermarket.base.Base.initialise(Base.java:50)
-	at com.sevenrmartsupermarket.base.Base.launchBrowser(Base.java:70)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></td>
-                                                                   </tr>
-                                                            </tbody>
-														</table>
-													</div>
-												</div> 
-											</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id='exception-details-wrapper' class='col _addedCell2'>
-						<div class='contents'>
-							<div class='card-panel details-view'>
-								<h5 class='exception-name'></h5>
-								<div class='exception-container'>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			<!-- /exceptions -->
 			
 			<!-- testrunner logs -->

@@ -3,26 +3,33 @@
 <suite name="parallel execution" thread-count="5" parallel="methods">
 	<listeners>
 		<listener
-			class-name="com.sevenrmartsupermarket.listeners.ExtentReporter"></listener>
+			class-name="com.sevenrmartsupermarket.listeners.ExtentReporter">
+		</listener>
 	</listeners>
 	<test name="smoke">
 		<classes>
 			<class name="com.sevenrmartsupermarket.tests.AdminUsersTest">
-				<methods><include name="verifyNewUserAdd"></include></methods>
+				<methods>
+					<include name="verifyNewUserAdd"></include>
+				</methods>
 			</class>
 		</classes>
 	</test>
 	<test name="regression">
 		<classes>
 			<class name="com.sevenrmartsupermarket.tests.LoginTest">
-				<methods><include name="verifyUserLogin"></include></methods>
+				<methods>
+					<include name="verifyUserLogin"></include>
+				</methods>
 			</class>
 		</classes>
 	</test>
 	<test name="sanity">
 		<classes>
 			<class name="com.sevenrmartsupermarket.tests.ManageUsersTest">
-				<methods><include name="verifySearchUser"></include></methods>
+				<methods>
+					<include name="verifySearchUser"></include>
+				</methods>
 			</class>
 		</classes>
 	</test>
