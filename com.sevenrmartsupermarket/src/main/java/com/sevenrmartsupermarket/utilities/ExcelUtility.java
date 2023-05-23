@@ -14,13 +14,21 @@ public class ExcelUtility {
 	XSSFWorkbook workBook;
 	XSSFSheet sheet;
 
-	public String getExcel(int i,int j) throws IOException {
-		String excelPath = System.getProperty("user.dir")+("//ExcelFiles//Push notification data.xlsx");
+	public String getExcel(int i, int j) throws IOException {
+		String excelPath = System.getProperty("user.dir") + ("//ExcelFiles//Push notification data.xlsx");
 		fileInputStream = new FileInputStream(excelPath);
 		workBook = new XSSFWorkbook(fileInputStream);
 		sheet = workBook.getSheet("notifications");
-		Row row=sheet.getRow(i);
-		Cell cell=row.getCell(j);
-		return cell.getStringCellValue();
+		Row row = sheet.getRow(i);
+		Cell cell = row.getCell(j);
+		switch (cell.getCellType()) {
+		case STRING:
+			return cell.getStringCellValue();
+		case NUMERIC:
+			return String.valueOf(cell.getNumericCellValue());
+		default:
+			break;
+		}
+		return null;
 	}
 }

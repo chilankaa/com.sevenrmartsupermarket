@@ -11,14 +11,14 @@ public class ManageUsersTest extends Base {
 	LoginPage loginpage;
 	ManageUsersPage manageuserspage;
 
-	@Test(groups = {"smoke","bug retest"})
+	@Test(groups = {"smoke","bug retest"}, retryAnalyzer =com.sevenrmartsupermarket.listeners.RetryAnalyser.class )
 	public void verifyStatusChangingButton() {
-//		loginpage = new LoginPage(driver);
-//		manageuserspage=new ManageUsersPage(driver);
-//		loginpage.login();
-//		manageuserspage.clickOnManageUsers();
-//		boolean status=manageuserspage.deactivateUser("Abhiramkrishnakumarsreenatest d");
-//		Assert.assertTrue(status);
+		loginpage = new LoginPage(driver);
+		manageuserspage=new ManageUsersPage(driver);
+		loginpage.login();
+		manageuserspage.clickOnManageUsers();
+		boolean status=manageuserspage.deactivateUser("Abhiramkrishnakumarsreenatest d");
+		Assert.assertTrue(status);
 	}
 	@Test(groups = "regression")
 	public void verifySearchUser() {
